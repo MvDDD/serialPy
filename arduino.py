@@ -39,6 +39,7 @@ def connect():
 			break
 	if UNO is None or not UNO.is_open:
 		print("Failed to connect to Arduino")
+		import os;os.exit(1)
 	time.sleep(2)
 
 def L32to8(value):
@@ -92,6 +93,7 @@ def pinMode(pin, mode):
 	validate(mode, [0, 1, 2])
 	if mode in [0, 1, 2]:
 		UNO.write(OPbytes(0x00, pin, mode))
+	return pin
 
 def digitalWrite(pin, value):
 	validate(pin, range(2, 22))

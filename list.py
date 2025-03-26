@@ -4,4 +4,5 @@ for item in [[a.hwid, a.device] for a in serial.tools.list_ports.comports()]:
 	"""
 	['USB VID:PID=1A86:7523 SER= LOCATION=1-1', 'COM10']
 	['USB VID:PID=2341:0043 SER=95635333031351D0B0A2 LOCATION=1-1', 'COM6']
+	['USB VID:PID=2341:0043 SER=85734323231351E09092 LOCATION=1-1', 'COM4']
 """
